@@ -1,0 +1,80 @@
+using namespace std;
+int isPalindrome(long long int prod)
+{
+    string s_prod = to_string(prod);
+    //cout<<s_prod.length()<<endl;
+    int len = s_prod.length();
+    int k,m,c=0;
+    if(len%2==0)
+    {
+        for(k = 0,m=len-1;k<len/2,m>=len/2;k++,m--)
+        {
+            char a = s_prod[k];
+            char b = s_prod[m];
+            if(a!=b)
+            {
+                c = 1;
+                break;
+            }
+        }
+        if(c == 1)
+        {
+            //cout<<"Not a palli"<<endl;
+            return 0;
+        }
+        else
+        {
+            //cout<<"is a palli"<<endl;
+            return 1;
+        }
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int main(){
+    int t,flag =0,i;
+    cin >> t;
+    long long int prod,answer;
+    vector<long long int> palindromes;
+    for(int i = 999;i>=111;i--)
+        {
+            for(int j = 999;j>=111;j--)
+            {
+                prod = i*j;
+                flag = isPalindrome(prod);
+                if(flag == 1)
+                {
+                    palindromes.push_back(prod);
+                }
+          
+            }
+    }
+   // cout<<palindromes.size()<<endl;
+    sort(palindromes.rbegin(), palindromes.rend());
+    /*for(i=0;i<palindromes.size();i++)
+    {
+        cout<<palindromes[i]<<endl;
+    }*/
+    for(int a0 = 0; a0 < t; a0++){
+        int n;
+        cin >> n;
+        for(i=0;i<palindromes.size();i++)
+        {
+            if(palindromes[i]<n)
+            {
+                answer = palindromes[i];
+                break;
+            }
+        }
+       // cout<<i<<endl;
+        if(i==palindromes.size())
+        {
+            answer = 99999;
+        }
+        cout<<answer<<endl;
+    }
+    return 0;
+}

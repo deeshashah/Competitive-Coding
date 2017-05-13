@@ -1,0 +1,9 @@
+- Steps to run a C++ program on Ubuntu :
+	1. Save the program file using a .cpp extension
+	2. Run the command in same folder : 
+		g++ <file_name>.cpp -o <output_file_name>
+	3. Now run the following command to execute : 
+		./<output_file_name>
+
+- Use <iostream> instead of <iostream.h>
+

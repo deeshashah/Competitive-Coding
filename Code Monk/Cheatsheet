@@ -1,0 +1,2 @@
+To convert char to int in C++ :
+> int x = (int)character - 48;
