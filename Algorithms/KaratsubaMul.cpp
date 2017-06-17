@@ -3,11 +3,17 @@
 #include <iostream>
 #include <string>
 #include <math.h> 
+#include <cpp_int.hpp>
 using namespace std;
+using namespace boost::multiprecision;
 int main()
 {
 	long long int n1, n2, n, a,b,c,d, div_factor, product;
 	string sn1;
+	int128_t v;
+	cout<<"Enter a number big:"<<endl;
+	cin>>v;
+	cout<<v;
 	cout << "Enter two numbers of equal length: " << endl;
 	cin >> n1 >> n2 ;
 	//cout << len(n1) << endl;

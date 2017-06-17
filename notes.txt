@@ -7,3 +7,5 @@
 
 - Use <iostream> instead of <iostream.h>
 
+
+g++ -std=c++0x  -o test example.cpp
