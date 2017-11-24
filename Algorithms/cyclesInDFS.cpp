@@ -10,13 +10,20 @@ void DFS(int i, int count)
 	count++;
 	for(j=1;j<=n;j++)
 	{
+		
 		if(visited[j]==0 && graph[i][j]==1)
 		{
 			cout<<i<<"-->"<<j<<endl;
-			DFS(j);
+			int count = 0;
+			DFS(j,0);
 			cout<<j<<"-->"<<i<<endl;
 
 		}
+		else if(visited[j]==1 && graph[i][j]==1)
+		{
+			cout<<"Cycle exists between: "<<i<<"and "<<j<<endl;
+		}
+		// cout<<"Visiting node : "<<j<<endl;
 	}
 	
 }
@@ -31,11 +38,20 @@ int main()
 	{
 		cin>>x>>y;
 		graph[x][y] = 1;
+		graph[y][x] = 1;
+	}
+	for(i=1;i<=n;i++)
+	{
+		for(j=1;j<=n;j++)
+		{
+			cout<<graph[i][j]<<" ";
+		}
+		cout<<endl;
 	}
 	for(i=1;i<=n;i++)
 		visited[i] = 0;
 
-	DFS(1);
+	DFS(1,0);
 	return 0;
 }
 
