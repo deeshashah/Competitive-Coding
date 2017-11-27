@@ -52,7 +52,7 @@ class Solution {
 }
 ```
 
-#### Editorial Java Solution : 
+#### Editorial Java Solution 1: 
 ```
 public int strStr(String haystack, String needle) 
 {
@@ -65,5 +65,13 @@ public int strStr(String haystack, String needle)
  			if (needle.charAt(j) != haystack.charAt(i + j)) break;
  		}
  	}
+}
+```
+
+#### One line Java Solution 2: 
+```
+public int strStr(String haystack, String needle) {
+        return haystack.indexOf(needle);
+    }
 }
 ```
