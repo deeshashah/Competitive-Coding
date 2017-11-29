@@ -58,7 +58,9 @@ class MissingRanges
 	}
 }
 ```
+
 #### Editorial
+```
 class PrintMissingElement 
 {
     // A O(n) function to print missing elements in an array
@@ -112,3 +114,4 @@ class PrintMissingElement
         missing.printMissing(arr, n);
     }
 }
+```
