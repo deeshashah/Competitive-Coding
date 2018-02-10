@@ -2,6 +2,7 @@
 [https://leetcode.com/submissions/detail/138170886/](https://leetcode.com/submissions/detail/138170886/)
 
 ### Accepted Solution:
+```
 class Solution {
     public int minCostClimbingStairs(int[] cost) {
         //int[] minCost = new int[cost.length];
@@ -15,8 +16,11 @@ class Solution {
         return Math.min(cost[0],cost[1]);
     }
 }
+```
+
 
 ### Editorial:
+```
 class Solution {
     public int minCostClimbingStairs(int[] cost) {
         int f1 = 0, f2 = 0;
@@ -28,3 +32,4 @@ class Solution {
         return Math.min(f1, f2);
     }
 }
+```

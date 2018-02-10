@@ -1,6 +1,7 @@
 [https://leetcode.com/problems/pascals-triangle/description/](https://leetcode.com/problems/pascals-triangle/description/)
 
 ### My Solution:
+```
 class Solution {
     public List<List<Integer>> generate(int numRows) {
         int i,j;
@@ -29,7 +30,10 @@ class Solution {
     }
 }
 
+```
+
 ### Editorial:
+```
 class Solution {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> triangle = new ArrayList<List<Integer>>();
@@ -66,3 +70,4 @@ class Solution {
         return triangle;
     }
 }
+```

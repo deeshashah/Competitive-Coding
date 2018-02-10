@@ -1,8 +1,8 @@
 [https://leetcode.com/submissions/detail/138280675/](https://leetcode.com/submissions/detail/138280675/)
 
 ### My Solution:
+```
 class Solution {
-    
     public int findMinimum(int[] nums,int low,int high,int n){
         if(high<low){return nums[0];}
         if(high==low){return nums[low];}
@@ -27,8 +27,10 @@ class Solution {
         return findMinimum(nums,0,nums.length-1,nums.length);
     }
 }
+```
 
 ### Editorial:
+```
 public class Solution {
     public int findMin(int[] num) {
         if (num == null || num.length == 0) {
@@ -52,3 +54,4 @@ public class Solution {
         return num[start];
     }
 }
+```
